@@ -1,0 +1,4 @@
+-> Contador: CD4518BE
+-> XOR:		 CD4070BCN
+-> AND:		 CD4081B
+-> Oscilador:NE555
