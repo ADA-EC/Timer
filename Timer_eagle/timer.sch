@@ -14875,14 +14875,6 @@ Source: Samtec SSW.pdf</description>
 <label x="38.1" y="139.7" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="IC3" gate="A" pin="Q3"/>
-<wire x1="71.12" y1="129.54" x2="71.12" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="71.12" y1="121.92" x2="43.18" y2="121.92" width="0.1524" layer="91"/>
-<wire x1="43.18" y1="121.92" x2="43.18" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="IC3" gate="B" pin="EN"/>
-<wire x1="43.18" y1="114.3" x2="45.72" y2="114.3" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="R3" gate="G$1" pin="1"/>
 <wire x1="53.34" y1="66.04" x2="43.18" y2="66.04" width="0.1524" layer="91"/>
 <label x="38.1" y="66.04" size="1.778" layer="95" rot="R180"/>
@@ -14967,6 +14959,16 @@ Source: Samtec SSW.pdf</description>
 <wire x1="132.08" y1="53.34" x2="119.38" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="X1" gate="-1" pin="1"/>
 <wire x1="119.38" y1="53.34" x2="119.38" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="Q3_EN2" class="0">
+<segment>
+<pinref part="IC3" gate="A" pin="Q3"/>
+<wire x1="71.12" y1="129.54" x2="71.12" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="121.92" x2="43.18" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="121.92" x2="43.18" y2="114.3" width="0.1524" layer="91"/>
+<pinref part="IC3" gate="B" pin="EN"/>
+<wire x1="43.18" y1="114.3" x2="45.72" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>

@@ -10842,6 +10842,14 @@ Type: &lt;b&gt;SPC4077 / SPC 4078&lt;/b&gt;&lt;p&gt;</description>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
+<symbol name="VSS">
+<wire x1="-1.27" y1="1.905" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="1.27" y2="1.905" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.27" x2="1.27" y2="1.905" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.905" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<text x="-2.54" y="-5.08" size="1.778" layer="96" rot="R90">&gt;VALUE</text>
+<pin name="VSS" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="VDD" prefix="VDD">
@@ -10874,6 +10882,19 @@ Type: &lt;b&gt;SPC4077 / SPC 4078&lt;/b&gt;&lt;p&gt;</description>
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="GND" x="0" y="0"/>
+</gates>
+<devices>
+<device name="">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="VSS" prefix="VSS">
+<description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="VSS" x="0" y="0"/>
 </gates>
 <devices>
 <device name="">
@@ -14512,6 +14533,7 @@ Source: Samtec SSW.pdf</description>
 <part name="R5" library="eagle-ltspice" deviceset="R" device="0207/10"/>
 <part name="R6" library="eagle-ltspice" deviceset="R" device="0207/10"/>
 <part name="GND5" library="supply1" deviceset="GND" device=""/>
+<part name="VSS1" library="supply1" deviceset="VSS" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14561,6 +14583,7 @@ Source: Samtec SSW.pdf</description>
 <instance part="R5" gate="G$1" x="134.62" y="83.82"/>
 <instance part="R6" gate="G$1" x="152.4" y="71.12" rot="R270"/>
 <instance part="GND5" gate="1" x="152.4" y="45.72"/>
+<instance part="VSS1" gate="G$1" x="30.48" y="91.44"/>
 </instances>
 <busses>
 </busses>
@@ -14581,13 +14604,17 @@ Source: Samtec SSW.pdf</description>
 <wire x1="40.64" y1="116.84" x2="40.64" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="99.06" x2="33.02" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="R1" gate="G$1" pin="1"/>
-<wire x1="33.02" y1="99.06" x2="27.94" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="99.06" x2="30.48" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="99.06" x2="27.94" y2="99.06" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="88.9" x2="33.02" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="33.02" y1="88.9" x2="33.02" y2="99.06" width="0.1524" layer="91"/>
 <junction x="33.02" y="99.06"/>
 <junction x="40.64" y="116.84"/>
 <junction x="22.86" y="99.06"/>
 <junction x="27.94" y="99.06"/>
+<pinref part="VSS1" gate="G$1" pin="VSS"/>
+<wire x1="30.48" y1="93.98" x2="30.48" y2="99.06" width="0.1524" layer="91"/>
+<junction x="30.48" y="99.06"/>
 </segment>
 <segment>
 <pinref part="C1" gate="G$1" pin="-"/>
